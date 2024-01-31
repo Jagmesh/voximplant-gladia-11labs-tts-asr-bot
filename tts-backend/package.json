@@ -1,0 +1,19 @@
+{
+  "name": "playnvoice_mirror_voicebot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dockerCreate": "docker image build . -t cr.yandex/crpurml7vpr2vpn1ovdh/playnvoice-voicebot-http-tts:latest",
+    "dockerPush": "docker push cr.yandex/crpurml7vpr2vpn1ovdh/playnvoice-voicebot-http-tts:latest",
+    "dockerUp": "npm run dockerCreate && npm run dockerPush"
+  },
+  "author": "",
+  "license": "ISC"
+}

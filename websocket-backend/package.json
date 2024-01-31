@@ -1,0 +1,20 @@
+{
+  "name": "ws-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dockerCreate": "docker image build . -t cr.yandex/crpurml7vpr2vpn1ovdh/playnvoice-voicebot-websocket:latest",
+    "dockerPush": "docker push cr.yandex/crpurml7vpr2vpn1ovdh/playnvoice-voicebot-websocket:latest",
+    "dockerUp": "npm run dockerCreate && npm run dockerPush",
+    "dockerUpVM": "npm run dockerUp && cd ../vm && npm run up"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "ws": "^8.14.2"
+  }
+}
